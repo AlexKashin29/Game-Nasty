@@ -1,0 +1,19 @@
+{
+  "name": "Ты — моя вселенная",
+  "short_name": "Для Насти",
+  "description": "Письмо через вселенную",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#121124",
+  "theme_color": "#121124",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "./assets/heart.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

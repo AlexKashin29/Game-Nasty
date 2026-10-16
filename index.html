@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#121124" />
+    <meta
+      name="description"
+      content="Одно маленькое приключение для Насти. Найди письмо Саши, путешествуя по звёздным дорожкам вместе с котом."
+    />
+    <title>Ты — моя вселенная · Письмо для Насти</title>
+    <link rel="icon" href="./assets/heart.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="stars-bg" aria-hidden="true"></div>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="./"
+          ><span class="brand-mark">✧</span
+          ><span>Твоя вселенная<small>ЛИЧНОЕ. ВОЛШЕБНОЕ. НАШЕ.</small></span></a
+        >
+        <div class="sidebar-letter">
+          <img
+            src="./assets/couple_art.webp"
+            alt="Настя, Саша и кот в сказочной вселенной"
+          /><span>Одно письмо.<br /><em>Целая вселенная чувств.</em></span>
+        </div>
+        <nav aria-label="Разделы приложения">
+          <button data-tab="adventure" aria-current="page">
+            <span>✦</span>Приключение <i>01</i></button
+          ><button data-tab="route"><span>◎</span>Наш маршрут <i>06</i></button
+          ><button data-tab="album">
+            <span>♡</span>Альбом чудес <i id="album-count">0</i></button
+          ><button data-tab="letter">
+            <span>✉</span>Письмо Саши <i id="letter-count">0/6</i>
+          </button>
+        </nav>
+        <div class="companion">
+          <img src="./assets/cat.webp" alt="Наш серый кот" />
+          <div>Ваш проводник<small>Кот. Просто кот. ♡</small></div>
+          <span class="online-dot"></span>
+        </div>
+        <p class="sidebar-note">
+          Сделано с обожанием.<br />Специально для тебя, Настя.
+        </p>
+      </aside>
+      <div class="main-shell">
+        <header class="topbar">
+          <span class="topbar-label">НАСТЯ, ТЫ ДОМА <span>✦</span></span>
+          <div class="topbar-actions">
+            <button
+              id="sound"
+              class="icon-button"
+              aria-label="Включить звук"
+              aria-pressed="false"
+            >
+              ♫</button
+            ><button id="settings" class="icon-button" aria-label="Настройки">
+              ⚙</button
+            ><img class="avatar" src="./assets/nastya_art.webp" alt="Настя" />
+          </div>
+        </header>
+        <main id="main" tabindex="-1">
+          <div class="loading">Зажигаем звёзды…</div>
+        </main>
+        <footer>
+          <span id="save-status">Путешествие сохраняется автоматически</span
+          ><span>Саша + Настя + один очень важный кот <b>♡</b></span>
+        </footer>
+      </div>
+    </div>
+    <nav class="mobile-nav" aria-label="Разделы приложения на телефоне">
+      <button data-tab="adventure" aria-current="page">
+        <span>✦</span>Игра</button
+      ><button data-tab="route"><span>◎</span>Маршрут</button
+      ><button data-tab="album"><span>♡</span>Альбом</button
+      ><button data-tab="letter"><span>✉</span>Письмо</button>
+    </nav>
+    <dialog id="modal" aria-labelledby="modal-title">
+      <button id="close-modal" class="close" aria-label="Закрыть">×</button>
+      <div id="modal-content"></div>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
